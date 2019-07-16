@@ -10,8 +10,8 @@ Please feel free to open a pull-request to improve this page!
 
 If you want to sonsore the future development of visjs please consider to sponsore us!
 
-<a href="https://opencollective.com/vis/donate" target="_blank">
-  <img src="https://opencollective.com/vis/donate/button@2x.png?color=blue" width=300 />
+<a href="https://opencollective.com/visjs/donate" target="_blank">
+  <img src="https://opencollective.com/visjs/donate/button@2x.png?color=blue" width=300 />
 </a>
 
 ## License
