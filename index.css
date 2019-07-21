@@ -18,13 +18,25 @@ header {
 	padding: 1em;
 	text-align: center;
 	
-	background-color: var(--vis-color-blue);
 	color: white;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+
+	background: var(--vis-color-blue)9; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #134099 0%, #207cca 66%, #378ed6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #134099 0%,#207cca 66%,#378ed6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #134099 0%,#207cca 66%,#378ed6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#134099', endColorstr='#378ed6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 header #title {
 	font-size: 4em;
 	font-weight: normal;
+}
+
+header h1 sub {
+	display: block;
+	font-size: large;
+	margin-top: -5px;
 }
 
 main {
@@ -72,10 +84,45 @@ section p {
 	min-height: 4em;
 }
 
+section ul.links {
+	padding: 0;
+	margin-top: 0;
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+section ul.links > li {
+	list-style: none;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+	margin: 0.5em;
+}
+
 .button {
 	display: inline-block;
 	padding: 0.5em 1em;
-	margin: 0 1em 0 0;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
@@ -104,6 +151,32 @@ section p {
 
 .button.blue:hover {
 	background-color: #2e6da4;
+}
+
+.button.github .btn-text {
+	display: none;
+}
+.button.github:after {
+	content: '';
+	display: block;
+	background: url(./images/github-logo.svg);
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+	background-repeat: no-repeat;
+}
+
+.button.npm .btn-text {
+	display: none;
+}
+.button.npm:after {
+	content: '';
+	display: block;
+	background: url(./images/npm-logo.svg);
+	width: 50px;
+	height: 20px;
+	background-size: 50px;
+	background-repeat: no-repeat;
 }
 
 footer {
