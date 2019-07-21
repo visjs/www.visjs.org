@@ -1,6 +1,7 @@
 :root {
 	--max-content-width: 70em;
 	--vis-color-blue: #07508E;
+	--vis-color-yellow: #FFAF12;
 }
 
 html, body {
@@ -36,7 +37,14 @@ header #title {
 header h1 sub {
 	display: block;
 	font-size: large;
-	margin-top: -5px;
+	margin-top: -0.5em;
+	margin-left: 1em;
+}
+
+header h1 sub .community-edition {
+	text-decoration: none;
+	color: yellow;
+	font-size: x-large;
 }
 
 main {
