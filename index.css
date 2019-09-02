@@ -58,6 +58,10 @@ main > .title {
 	display: none;
 }
 
+main h2 {
+	color: darkgray;
+}
+
 main article {
 	clear: both;
 	border-top: 1px solid lightgray;
@@ -65,6 +69,16 @@ main article {
 
 .oc-loading-container {
 	margin-top: 1.5em;
+}
+
+#supporters section img {
+	border: none;
+	max-width: 100%;
+	max-height: 100%;
+	box-sizing: border-box;
+	object-fit: contain;
+	object-position: bottom;
+	min-height: 14em;
 }
 
 section {
