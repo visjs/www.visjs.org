@@ -47,35 +47,6 @@ header h1 sub .community-edition {
 	font-size: x-large;
 }
 
-nav {
-	overflow: none;
-	width:100%;
-
-}
-
-nav ul{
-
-}
-
-nav li{
-	list-style: none;
-	display: inline-block;
-}
-
-nav a{
-	letter-spacing: .05rem;
-	padding: 1rem 1.2rem 1rem;
-	text-decoration: none;
-	padding: .2rem .4rem ;
-	margin-left: .4rem;
-}
-
-nav a:hover {
-	box-shadow: 0 5px 0 #00008b;
-	border: 2px solid white;
-	transition: .2s;
-}
-
 main {
 	width: 100%;
 	max-width: var(--max-content-width);
@@ -241,4 +212,32 @@ footer {
 
 footer .license {
 	float: right;
+}
+
+footer br{
+	display: none;
+}
+
+h2{
+	text-align: center;
+}
+
+@media only screen and (max-width: 746px) {
+	section{
+		padding-left: 
+		justify-content: center;
+		max-width: calc(var(--max-content-width)/1);
+	}
+
+	footer br{
+		display: visible;
+	}
+
+	footer .license{
+		display: block;
+		float: none;
+		margin-top: .5rem;
+		margin-left: 40%;
+	}
+
 }
