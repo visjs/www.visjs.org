@@ -222,10 +222,20 @@ h2{
 	text-align: center;
 }
 
+@media only screen and (max-width:1140px){
+	main{
+		max-width: calc(var(--max-content-width)*(2/3));	
+		align-items: center;
+		margin:0 auto;
+	}
+
+}
+
 @media only screen and (max-width: 746px) {
 	section{
-		padding-left: 
-		justify-content: center;
+		padding-left: 20%;
+		padding-right: 20%;
+		align-items: center;
 		max-width: calc(var(--max-content-width)/1);
 	}
 
