@@ -49,7 +49,8 @@ header h1 sub .community-edition {
 
 main {
 	width: 100%;
-	max-width: var(--max-content-width);
+/*	max-width: var(--max-content-width); */
+	max-width: 78em;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -85,7 +86,8 @@ section {
 	display: block;
 	float: left;
 	text-align: center;
-	max-width: calc(var(--max-content-width)/3);
+/*	max-width: calc(var(--max-content-width)/3); */
+	max-width: 26em;
 	box-sizing: border-box;
 	margin: 0 0 2em 0;
 	padding: 2em 2em;
@@ -222,21 +224,33 @@ h2{
 	text-align: center;
 }
 
-@media only screen and (max-width:1140px){
-	main{
-		max-width: calc(var(--max-content-width)*(2/3));	
-		align-items: center;
-		margin:0 auto;
+@media only screen and (max-width: 77em){
+	main{	
+		width: 100%;
+		max-width: 52em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	footer br{
+		display: visible;
+	}
+
+	footer .license{
+		display: block;
+		float: none;
+		margin-top: .5rem;
+		margin-left: 40%;
 	}
 
 }
 
-@media only screen and (max-width: 746px) {
-	section{
-		padding-left: 20%;
-		padding-right: 20%;
-		align-items: center;
-		max-width: calc(var(--max-content-width)/1);
+@media only screen and (max-width: 52em) {
+	main{
+		width: 100%;
+		max-width: 26em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	footer br{
