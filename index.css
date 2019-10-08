@@ -224,7 +224,7 @@ h2{
 	text-align: center;
 }
 
-@media only screen and (max-width: 77em){
+@media only screen and (max-width: 78em){
 	main{	
 		width: 100%;
 		max-width: 52em;
