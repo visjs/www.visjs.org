@@ -49,8 +49,7 @@ header h1 sub .community-edition {
 
 main {
 	width: 100%;
-/*	max-width: var(--max-content-width); */
-	max-width: 78em;
+	max-width: 84em;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -86,8 +85,7 @@ section {
 	display: block;
 	float: left;
 	text-align: center;
-/*	max-width: calc(var(--max-content-width)/3); */
-	max-width: 26em;
+	max-width: 28em;
 	box-sizing: border-box;
 	margin: 0 0 2em 0;
 	padding: 2em 2em;
@@ -224,12 +222,10 @@ h2{
 	text-align: center;
 }
 
-@media only screen and (max-width: 78em){
+@media only screen and (max-width: 84em){
 	main{	
 		width: 100%;
-		max-width: 52em;
-		margin-left: auto;
-		margin-right: auto;
+		max-width: 56em;
 	}
 
 	footer br{
@@ -245,12 +241,10 @@ h2{
 
 }
 
-@media only screen and (max-width: 52em) {
+@media only screen and (max-width: 56em) {
 	main{
 		width: 100%;
-		max-width: 26em;
-		margin-left: auto;
-		margin-right: auto;
+		max-width: 28em;
 	}
 
 	footer br{
