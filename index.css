@@ -108,24 +108,31 @@ section p {
 
 section ul.links {
 	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
 	margin-top: 0;
 	display: -ms-inline-flexbox;
 	display: -webkit-inline-flex;
 	display: inline-flex;
+	-moz-flex-direction:row;
 	-webkit-flex-direction: row;
 	-ms-flex-direction: row;
 	flex-direction: row;
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
+	-moz-flex-wrap:wrap;
 	flex-wrap: wrap;
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
+	-moz-justify-content:center;
 	justify-content: center;
 	-webkit-align-content: flex-start;
 	-ms-flex-line-pack: start;
+	-moz-align-content:center;
 	align-content: flex-start;
 	-webkit-align-items: flex-start;
 	-ms-flex-align: start;
+	-moz-flex-align:start;
 	align-items: flex-start;
 }
 section ul.links > li {
@@ -139,7 +146,7 @@ section ul.links > li {
 	-webkit-align-self: auto;
 	-ms-flex-item-align: auto;
 	align-self: auto;
-	margin: 0.5em;
+	margin: 0.4em;
 }
 
 .button {
@@ -225,7 +232,7 @@ h2{
 @media only screen and (max-width: 84em){
 	main{	
 		width: 100%;
-		max-width: 56em;
+		max-width: 57em;
 	}
 
 	footer br{
@@ -244,7 +251,7 @@ h2{
 @media only screen and (max-width: 56em) {
 	main{
 		width: 100%;
-		max-width: 28em;
+		max-width: 27em;
 	}
 
 	footer br{
@@ -258,4 +265,11 @@ h2{
 		margin-left: 40%;
 	}
 
+	section ul.links > li {
+		font-size: 0.95em;
+	}
+
+	.button{
+		padding: 0.4em 0.8em;
+	}
 }
