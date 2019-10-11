@@ -6,9 +6,9 @@ This repository serves the webpage [www.visjs.org](https://www.visjs.org).
 
 Please feel free to open a pull-request to improve this page!
 
-## Sponsore
+## Sponsorship
 
-If you want to sonsore the future development of visjs please consider to sponsore us!
+If you want to sponsor the future development of visjs please consider sponsoring us!
 
 <a href="https://opencollective.com/visjs/donate" target="_blank">
   <img src="https://opencollective.com/visjs/donate/button@2x.png?color=blue" width=300 />
