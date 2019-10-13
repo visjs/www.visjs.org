@@ -7,7 +7,8 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+  Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -47,6 +48,10 @@ header h1 sub .community-edition {
 	font-size: x-large;
 }
 
+header p {
+	line-height: 1.4;
+}
+
 main {
 	width: 100%;
 	max-width: var(--max-content-width);
@@ -71,6 +76,12 @@ main article {
 	margin-top: 1.5em;
 }
 
+#supporters h2,
+#sponsors h2 {
+	margin: 1em 0;
+	text-align: center;
+}
+
 #supporters section img {
 	border: none;
 	max-width: 100%;
@@ -81,11 +92,27 @@ main article {
 	min-height: 14em;
 }
 
+.feature {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (min-width: 760px) and (max-width: 960px) {
+	.feature {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 759px) {
+	.feature {
+		grid-template-columns: repeat(1, 1fr);
+		padding: .5em 0;
+	}
+}
+
 section {
 	display: block;
-	float: left;
 	text-align: center;
-	max-width: calc(var(--max-content-width)/3);
 	box-sizing: border-box;
 	margin: 0 0 2em 0;
 	padding: 2em 2em;
@@ -104,10 +131,12 @@ section img {
 
 section p {
 	min-height: 4em;
+	line-height: 1.4;
 }
 
 section ul.links {
 	padding: 0;
+	font-size: 14px;
 	margin-top: 0;
 	display: -ms-inline-flexbox;
 	display: -webkit-inline-flex;
@@ -202,80 +231,82 @@ section ul.links > li {
 }
 
 footer {
-	display: block;
+	display: flex;
 	padding: 1em;
+	justify-content: space-between;
 	max-width: var(--max-content-width);
+	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
 	border-top: 1px solid lightgray;
 }
 
-footer .license {
-	float: right;
+.contribute {
+	margin-right: 10px;
 }
 
 /* Carbon Ads */
 
 #carbonads {
-  display: flex;
-  margin: 0 auto;
-  max-width: 320px;
-  height: 142px;
-  background-color: hsl(0, 0%, 98%);
-  box-shadow: 0 0 0 1px #d3d3d3;
+	display: flex;
+	margin: 0 auto;
+	max-width: 320px;
+	min-height: 142px;
+	background-color: hsl(0, 0%, 98%);
+	box-shadow: 0 0 0 1px #d3d3d3;
 
-  align-items: center;
+	align-items: center;
 }
 
 #carbonads a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 #carbonads a:hover {
-  color: inherit;
+	color: inherit;
 }
 
 #carbonads span {
-  position: relative;
-  display: block;
-  overflow: hidden;
+	position: relative;
+	display: block;
+	overflow: hidden;
 }
 
 #carbonads .carbon-wrap {
-  display: flex;
+	display: flex;
 }
 
 .carbon-img {
-  display: block;
-  margin: 0;
-  line-height: 1;
+	display: block;
+	margin: 0;
+	line-height: 1;
 }
 
 .carbon-img img {
-  display: block;
-  max-width: none !important;
-  width: auto !important;
-  height: 117px !important;
-  border: 0;
+	display: block;
+	max-width: none !important;
+	width: auto !important;
+	height: 117px !important;
+	border: 0;
 }
 
 .carbon-text {
-  padding: 10px;
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.35;
-  letter-spacing: .2px;
+	padding: 10px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 1.35;
+	letter-spacing: .2px;
 }
 
 .carbon-poweredby {
-  display: block;
-  padding: 8px 10px;
-  background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  font-weight: 600;
-  font-size: 9px;
-  line-height: 1;
+	display: block;
+	padding: 8px 10px;
+	background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	font-weight: 600;
+	font-size: 9px;
+	line-height: 1;
 }
