@@ -147,6 +147,10 @@ main article {
 	min-height: 14em;
 }
 
+#sponsors iframe {
+  max-width: 100%;
+}
+
 .feature {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
