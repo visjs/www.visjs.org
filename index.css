@@ -1,13 +1,8 @@
-:root {
-	--max-content-width: 70em;
-	--vis-color-blue: #07508E;
-	--vis-color-yellow: #FFAF12;
-}
-
 html, body {
-	margin: 0;
-	padding: 0;
+	margin: 0em;
+	padding: 0em;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
 }
 
 a {
@@ -15,14 +10,20 @@ a {
 	color: inherit;
 }
 
+.content {
+	width: 100%;
+	max-width: 70em;
+	margin: 0px auto;
+	padding: 0px;
+}
+
 header {
 	padding: 1em;
-	text-align: center;
 
 	color: white;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 
-	background: var(--vis-color-blue)9; /* Old browsers */
+	background: #07508E; /* Old browsers */
 	background: -moz-linear-gradient(-45deg,  #134099 0%, #207cca 66%, #378ed6 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(-45deg,  #134099 0%,#207cca 66%,#378ed6 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(135deg,  #134099 0%,#207cca 66%,#378ed6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -47,23 +48,15 @@ header h1 sub .community-edition {
 	font-size: x-large;
 }
 
-main {
-	width: 100%;
-	max-width: var(--max-content-width);
-	margin-left: auto;
-	margin-right: auto;
-}
-
-main > .title {
+article > .title {
 	display: none;
 }
 
-main h2 {
+article h2 {
 	color: darkgray;
 }
 
-main article {
-	clear: both;
+article {
 	border-top: 1px solid lightgray;
 }
 
@@ -82,70 +75,39 @@ main article {
 }
 
 section {
-	display: block;
-	float: left;
-	text-align: center;
-	max-width: calc(var(--max-content-width)/3);
+	display: inline-block;
+	max-width: 23em;
+	width: 100%;
 	box-sizing: border-box;
-	margin: 0 0 2em 0;
-	padding: 2em 2em;
+	margin: 0em 0em 2em 0em;
+	padding: 2em;
 }
 
 section .title {
-	margin: 0.5em 0;
+	margin: 0.5em 0em;
 	font-size: 2em;
 	font-weight: normal;
 	color: gray;
 }
 
-section img {
+section img.main-figure {
 	border: 1px solid lightgray;
+	width: 100%;
+	max-width: 240px; /* This is the width of the image files. */
 }
 
 section p {
 	min-height: 4em;
 }
 
-section ul.links {
-	padding: 0;
-	margin-top: 0;
-	display: -ms-inline-flexbox;
-	display: -webkit-inline-flex;
-	display: inline-flex;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-align-content: flex-start;
-	-ms-flex-line-pack: start;
-	align-content: flex-start;
-	-webkit-align-items: flex-start;
-	-ms-flex-align: start;
-	align-items: flex-start;
-}
-section ul.links > li {
-	list-style: none;
-	-webkit-order: 0;
-	-ms-flex-order: 0;
-	order: 0;
-	-webkit-flex: 0 1 auto;
-	-ms-flex: 0 1 auto;
-	flex: 0 1 auto;
-	-webkit-align-self: auto;
-	-ms-flex-item-align: auto;
-	align-self: auto;
+section .links > .link {
+	display: inline-block;
 	margin: 0.5em;
 }
 
 .button {
 	display: inline-block;
 	padding: 0.5em 1em;
-	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
 	-ms-touch-action: manipulation;
@@ -165,19 +127,26 @@ section ul.links > li {
 	background-color: #ccc;
 }
 
-.button.blue {
+.button.examples:after {
+	content: 'View examples';
+	display: block;
+}
+
+.button.docs:after {
+	content: 'View docs';
+	display: block;
+}
+
+.button.docs {
 	color: #fff;
-	background-color: var(--vis-color-blue);
+	background-color: #07508E;
 	border-color: #2e6da4;
 }
 
-.button.blue:hover {
+.button.docs:hover {
 	background-color: #2e6da4;
 }
 
-.button.github .btn-text {
-	display: none;
-}
 .button.github:after {
 	content: '';
 	display: block;
@@ -188,9 +157,6 @@ section ul.links > li {
 	background-repeat: no-repeat;
 }
 
-.button.npm .btn-text {
-	display: none;
-}
 .button.npm:after {
 	content: '';
 	display: block;
@@ -201,17 +167,27 @@ section ul.links > li {
 	background-repeat: no-repeat;
 }
 
-footer {
+.button.unpkg:after {
+	content: 'unpkg';
 	display: block;
-	padding: 1em;
-	max-width: var(--max-content-width);
-	margin-left: auto;
-	margin-right: auto;
-	border-top: 1px solid lightgray;
 }
 
-footer .license {
+.opencollective-banner {
+	/*
+	 * This prevents the iframe from messing up the layout. The problem is that
+	 * the iframe has fixed width set by the JS that inserts it.
+	 */
+	overflow-x: auto;
+}
+
+#footer {
+	padding: 1em;
+	text-align: left;
+}
+
+#footer .license {
 	float: right;
+	margin-left: 1em; /* Prevents the footer text from touching the image. */
 }
 
 /* Carbon Ads */
