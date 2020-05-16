@@ -74,6 +74,12 @@ article {
 	min-height: 14em;
 }
 
+.content.libs {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
 section {
 	display: inline-block;
 	max-width: 23em;
@@ -81,6 +87,12 @@ section {
 	box-sizing: border-box;
 	margin: 0em 0em 2em 0em;
 	padding: 2em;
+}
+
+@media only screen and (max-width: 735px) {
+	section {
+		max-width: 100%;
+	}
 }
 
 section .title {
