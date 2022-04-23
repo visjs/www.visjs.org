@@ -267,3 +267,20 @@ section .links > .link {
   font-size: 9px;
   line-height: 1;
 }
+
+.deprecated h1 {
+  margin: 10% 0;
+  padding: 0;
+}
+.deprecated ul {
+  list-style: none;
+}
+.deprecated ul li {
+  margin: .5rem 0;
+}
+.deprecated footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
